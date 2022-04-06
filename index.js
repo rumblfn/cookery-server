@@ -138,7 +138,7 @@ app.get('/user/reciepes/get', (req, res) => {
 
 
 app.get('/recipes/get', (req, res) => {
-    const sqlSelect = `SELECT * FROM reciepes ORDER BY reciepes.rating ASC LIMIT 1`;
+    const sqlSelect = `SELECT * FROM reciepes ORDER BY reciepes.rating ASC LIMIT 30`;
     db.query(sqlSelect, (err, result) => {
         console.log(`error: ${err}`);
         console.log(`result: ${result}`);
